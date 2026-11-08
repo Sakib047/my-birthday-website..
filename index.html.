@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A New Chapter | Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #171522;
+  color: #f5eee5;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+
+:root {
+  --gold: #d8ba91;
+  --muted: #aaa3b1;
+  --line: rgba(255,255,255,.13);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 8%;
+  border-bottom: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #eee5da;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 115px 20px 80px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 1.12;
+  margin: 28px 0;
+}
+
+em { color: var(--gold); }
+
+.intro {
+  max-width: 480px;
+  margin: auto;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.buttons {
+  margin-top: 35px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 23px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 2px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: transparent;
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--gold);
+  color: #211d25;
+}
+
+.cake {
+  font-size: 95px;
+  margin-top: 65px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+
+section {
+  padding: 90px 20px;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  font-size: clamp(34px, 5vw, 52px);
+  margin: 18px 0;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 50px auto 25px;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  min-width: 65px;
+}
+
+.countdown strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: var(--gold);
+}
+
+.countdown span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+blockquote {
+  max-width: 720px;
+  margin: 35px auto;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.5;
+}
+
+.gallery {
+  max-width: 950px;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.photo {
+  min-height: 280px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #80677d, #30283d);
+  color: white;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.photo:nth-child(2) {
+  background: linear-gradient(145deg, #667b80, #293044);
+}
+
+.photo:nth-child(3) {
+  background: linear-gradient(145deg, #a18468, #393044);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+@media(max-width: 650px) {
+  .gallery { grid-template-columns: 1fr; }
+  .photo { min-height: 220px; }
+  .hero { padding-top: 85px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#">A LITTLE CELEBRATION ✦</a>
+  <a href="#memories">MEMORIES</a>
+</nav>
+
+<div class="hero">
+  <p class="eyebrow">ANOTHER TRIP AROUND THE SUN</p>
+
+  <h1>Here's to <em>another</em><br>
+  beautiful chapter.</h1>
+
+  <p class="intro">
+    A day to pause, appreciate the journey,
+    celebrate the present, and welcome
+    everything waiting to unfold.
+  </p>
+
+  <div class="buttons">
+    <a class="button primary" href="#countdown">LET'S CELEBRATE ↗</a>
+    <button class="button" id="musicButton">♫ PLAY MUSIC</button>
+  </div>
+
+  <div class="cake">🎂</div>
+  <p class="eyebrow">MAKE A WISH</p>
+</div>
+
+<section id="countdown">
+  <p class="eyebrow">THE DAY IS SPECIAL</p>
+  <h2>Counting down to <em>the moment.</em></h2>
+  <p class="description">Every year is a new story. Here's the next page.</p>
+
+  <div class="countdown">
+    <div><strong id="days">00</strong><span>DAYS</span></div>
+    <div><strong id="hours">00</strong><span>HOURS</span></div>
+    <div><strong id="minutes">00</strong><span>MINUTES</span></div>
+    <div><strong id="seconds">00</strong><span>SECONDS</span></div>
+  </div>
+
+  <p class="description" id="dateText"></p>
+</section>
+
+<section>
+  <p class="eyebrow">A LITTLE REMINDER</p>
+  <blockquote>
+    "May the coming year bring meaningful
+    moments, unexpected happiness,
+    quiet confidence, and countless
+    reasons to be grateful."
+  </blockquote>
+  <p class="eyebrow">A NOTE TO THE YEAR AHEAD</p>
+</section>
+
+<section id="memories">
+  <p class="eyebrow">LITTLE PIECES OF LIFE</p>
+  <h2>Moments worth <em>keeping.</em></h2>
+  <p class="description">
+    Some memories deserve to last forever.
+  </p>
+
+  <div class="gallery">
+    <div class="photo">THE PEOPLE</div>
+    <div class="photo">THE PLACES</div>
+    <div class="photo">THE LITTLE THINGS</div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">A NEW CHAPTER BEGINS</p>
+  <h2>Stay curious.<br><em>Keep becoming.</em></h2>
+  <p class="description">
+    Here's to everything that is yet to come.
+  </p>
+</section>
+
+<footer>
+  MADE WITH A LITTLE LOVE ✦ <span id="year"></span>
+</footer>
+
+<audio id="music" src="birthday-music.mp3" loop></audio>
+
+<script>
+// CHANGE THIS TO YOUR BIRTHDAY: YYYY-MM-DD
+const birthday = "2026-12-15";
+
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+
+musicButton.addEventListener("click", async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+      musicButton.textContent = "Ⅱ PAUSE MUSIC";
+    } catch {
+      alert("Please add your birthday-music.mp3 file first.");
+    }
+  } else {
+    music.pause();
+    musicButton.textContent = "♫ PLAY MUSIC";
+  }
+});
+
+function updateCountdown() {
+  const now = new Date();
+  const parts = birthday.split("-").map(Number);
+  let target = new Date(parts[0], parts[1]-1, parts[2]);
+
+  if (target < now) {
+    target.setFullYear(now.getFullYear() + 1);
+  }
+
+  const difference = target - now;
+
+  const days = Math.floor(difference / 86400000);
+  const hours = Math.floor(difference / 3600000) % 24;
+  const minutes = Math.floor(difference / 60000) % 60;
+  const seconds = Math.floor(difference / 1000) % 60;
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
+
+  document.getElementById("dateText").textContent =
+    "The next celebration is on " +
+    target.toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
